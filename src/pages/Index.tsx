@@ -212,34 +212,81 @@ const Index = () => {
       </section>
 
       <section className="py-16 px-4 bg-accent/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-light mb-6">Обо мне</h2>
-          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Меня зовут Екатерина, я сертифицированный массажист с опытом работы более 5 лет. 
-            Использую авторские методики и индивидуальный подход к каждому клиенту.
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-light text-center mb-4">Отзывы клиентов</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Что говорят те, кто уже оценил качество моей работы
           </p>
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                <Icon name="Award" size={32} className="text-primary" />
-              </div>
-              <h3 className="font-semibold mb-2">Сертификаты</h3>
-              <p className="text-sm text-muted-foreground">Подтвержденная квалификация</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                <Icon name="Users" size={32} className="text-primary" />
-              </div>
-              <h3 className="font-semibold mb-2">500+ клиентов</h3>
-              <p className="text-sm text-muted-foreground">Довольных результатом</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                <Icon name="Heart" size={32} className="text-primary" />
-              </div>
-              <h3 className="font-semibold mb-2">С любовью</h3>
-              <p className="text-sm text-muted-foreground">К своему делу</p>
-            </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="hover-scale">
+              <CardContent className="pt-6">
+                <div className="flex gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Icon key={star} name="Star" size={20} className="fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  "Прекрасный массажист! После первого сеанса почувствовала значительное облегчение в спине. 
+                  Екатерина очень внимательная и профессиональная. Буду ходить регулярно!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-lg font-semibold text-primary">А</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Анна</p>
+                    <p className="text-sm text-muted-foreground">Классический массаж</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-scale">
+              <CardContent className="pt-6">
+                <div className="flex gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Icon key={star} name="Star" size={20} className="fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  "Хожу к Екатерине уже полгода на антицеллюлитный массаж. Результат заметен! 
+                  Кожа стала более упругой, объемы ушли. Очень довольна!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-lg font-semibold text-primary">М</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Мария</p>
+                    <p className="text-sm text-muted-foreground">Антицеллюлитный массаж</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-scale">
+              <CardContent className="pt-6">
+                <div className="flex gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Icon key={star} name="Star" size={20} className="fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  "Работа за компьютером давала о себе знать постоянными болями в шее. 
+                  После курса массажа у Екатерины забыла о проблеме. Спасибо огромное!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-lg font-semibold text-primary">Д</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Дмитрий</p>
+                    <p className="text-sm text-muted-foreground">Массаж спины и шеи</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
